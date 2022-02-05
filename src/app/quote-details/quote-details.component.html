@@ -1,4 +1,6 @@
-<p>
-    {{quote?.author}} <br>
-    {{quote?.votes}}
-</p>
+<p>Published on {{quote?.publishedDate | date}}.</p>
+<p>The author ofthis quote is {{quote?.author}}.</p>
+<p>{{quote?.votes}} votes.</p>
+<p>This quote was published {{quote?.publishedDate | timeElapsed}} days ago.</p>
+
+
