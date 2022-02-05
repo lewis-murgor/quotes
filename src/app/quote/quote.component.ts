@@ -9,8 +9,8 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[] = [
-    {name:"Emancipate yourselves from mental slavery, none but ourselves can free our minds", author:"Bob Marley", votes:10},
-    {name:"Wisdom is greater than silver and gold.", author:"Bob Marley", votes:27}
+    {name:"Emancipate yourselves from mental slavery, none but ourselves can free our minds", author:"Bob Marley", votes:10, publishedDate:new Date(2021,1,9)},
+    {name:"Wisdom is greater than silver and gold.", author:"Bob Marley", votes:27, publishedDate:new Date(2021,3,29)}
   ];
 
   constructor() { }
