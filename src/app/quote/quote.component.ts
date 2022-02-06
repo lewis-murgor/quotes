@@ -12,8 +12,8 @@ export class QuoteComponent implements OnInit {
   }
 
   quotes:Quote[] = [
-    {name:"Emancipate yourselves from mental slavery, none but ourselves can free our minds", author:"Bob Marley", publishedDate:new Date(2021,1,9)},
-    {name:"Wisdom is greater than silver and gold.", author:"Bob Marley", publishedDate:new Date(2021,3,29)}
+    new Quote ("Emancipate yourselves from mental slavery, none but ourselves can free our minds", "Bob Marley", "Lewis Murgor", new Date(2021,1,9)),
+    new Quote("Wisdom is greater than silver and gold.", "Bob Marley", "Daniel Omondi", new Date(2021,3,29))
   ];
 
   deleteQuote(isRead: any, index: number){
