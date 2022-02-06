@@ -1,6 +1,7 @@
 <ul>
-    <li *ngFor="let quote of quotes">
+    <li *ngFor="let quote of quotes, let i=index">
       {{quote.name}}
-      <app-quote-details [quote]="quote"></app-quote-details>
+      <app-quote-details [quote]="quote" (isRead)) = 'deleteQuote($event, i)'></app-quote-details>
     </li>
 </ul>
+<app-form></app-form>
