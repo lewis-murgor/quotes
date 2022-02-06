@@ -1,17 +1,23 @@
 <div class="container">
     <h3>Publish a Quote below.</h3>
-    <form>
+    <form #form= 'ngForm'>
         <div class="form-group">
             <label for="name">Quote</label>
-            <textarea class="form-control" id="quote" rows="4"></textarea>
+            <textarea class="form-control" id="quote" [(ngModel)]="newQuote.name" name="quote" rows="4"></textarea>
+
+            Display {{newQuote.name}}
         </div>
         <div class="form-group">
             <label for="author">Author</label>
-            <input type="text" class="form-control" id="author">
+            <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" name="author">
+
+            Display {{newQuote.author}}
         </div>
         <div class="form-group">
             <label for="publisher">Publisher</label>
-            <input type="text" class="form-control" id="publisher">
+            <input type="text" class="form-control" id="publisher" [(ngModel)]="newQuote.publisher" name="publisher">
+
+            Display {{newQuote.publisher}}
         </div>
         <div class="form-group">
             <label for="published">Date published</label>
