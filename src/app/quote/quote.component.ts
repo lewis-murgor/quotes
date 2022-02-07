@@ -7,29 +7,39 @@ import { Quote } from '../quote';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
 
   quotes:Quote[] = [
-    new Quote ("Emancipate yourselves from mental slavery, none but ourselves can free our minds", "Bob Marley", "Lewis Murgor", new Date(2021,1,9)),
-    new Quote("Wisdom is greater than silver and gold.", "Bob Marley", "Daniel Omondi", new Date(2021,3,29))
+    new Quote("The only thing that overcomes hard luck is hard work", "Harry Golden", "Lewis Murgor", new Date(2021,3,29)),
+    new Quote("Wisdom is greater than silver and gold", "Bob Marley", "Daniel Ahuba", new Date(2021,1,1))
   ];
 
-  deleteQuote(isRead: any, index: number){
-    if (isRead) {
+  toggle(index:number) {
+    this.quotes[index].showQuoteDetails = !this.quotes[index].showQuoteDetails;
+  }
+
+  deleteQuote(isRead: any, index: number) {
+    if(isRead) {
       let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
 
-    if (toDelete) {
-      this.quotes.splice(index,1);
+      if(toDelete) {
+        this.quotes.splice(index, 1)
+      }
     }
   }
 
-  QuoteComponent.constructor();{
+  publishNewQuote(quote: Quote) {
+    quote.publishedDate = new Date(quote.publishedDate)
+    this.quotes.push(quote)
+  }
 
-  this.ngOnInit(); void {}
+  constructor() { }
 
-  }}}
+  ngOnInit(): void {
+  }
+
+}
+
+
 
 
 
