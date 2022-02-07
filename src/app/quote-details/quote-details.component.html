@@ -1,6 +1,6 @@
-<p>Published on {{quote?.publishedDate | date}}.</p>
-<p>The author of this quote is {{quote?.author}}.</p>
-<p>This quote was published {{quote?.publishedDate | timeElapsed}} days ago.</p>
-<button (click)="quoteDelete(true)">Delete</button>
-
+<p>~{{quote.author}}</p>
+<p>{{quote.publisher}}</p>
+<p>{{quote.publishedDate | date}}</p>
+<p>This quote was published {{quote.publishedDate | timeElapsed}} days ago.</p>
+<button (click)="quoteDelete(true)">Delete Quote</button>
 
