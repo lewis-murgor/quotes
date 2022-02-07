@@ -5,3 +5,6 @@ h3 {
 .button {
     text-align: center;
 }
+.card-body {
+    background-color: darkgray;
+}
