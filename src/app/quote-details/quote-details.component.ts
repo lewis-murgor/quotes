@@ -10,10 +10,22 @@ export class QuoteDetailsComponent implements OnInit {
 
   @Input()
   quote!: Quote;
+  @Input()
+  like!: Quote;
+  @Input()
+  disLike!: Quote;
   @Output() isRead = new EventEmitter <boolean> ();
 
   quoteDelete(read: boolean) {
     this.isRead.emit(read);
+  }
+
+  upvote() {
+    this.quote.upvotes+=1;
+  }
+
+  downvote() {
+    this.quote.downvotes+=1;
   }
 
   constructor() { }
