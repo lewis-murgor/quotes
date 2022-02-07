@@ -1,6 +1,11 @@
-<p>~{{quote.author}}</p>
-<p>{{quote.publisher}}</p>
-<p>{{quote.publishedDate | date}}</p>
-<p>This quote was published {{quote.publishedDate | timeElapsed}} days ago.</p>
-<button (click)="quoteDelete(true)">Delete Quote</button>
+
+<p>~{{quote.author}}~</p>
+<p>The quote was published by {{quote.publisher}}.</p>
+<p>It was published on {{quote.publishedDate | date}} which is {{quote.publishedDate | timeElapsed}} days ago.</p>
+<div class="votes">
+    <button class="btn btn-sm btn-success" (click)='upvote()'>Like:{{quote.upvotes}}</button>
+    <button class="btn btn-sm btn-danger" (click)='downvote()'>Dislike:{{quote.downvotes}}</button>
+</div>
+ <br>
+<div class="delete"><button (click)="quoteDelete(true)" class="btn btn-danger">Delete Quote</button></div>
 
