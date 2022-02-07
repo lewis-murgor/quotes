@@ -1,41 +1,45 @@
 <div class="container">
-    <h3>Publish a Quote below.</h3>
-    <form (ngSubmit)="publishQuote()" #form="ngForm">
-        <div class="form-group">
-            <label for="name">Quote:</label>
-            <textarea class="form-control" id="quote" [(ngModel)]="newQuote.name" name="name" #quote = "ngModel" required></textarea>
-            <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
-                <p>Input a quote.</p>
-            </div>
+    <div class="card">
+        <div class="card-body">
+            <h3>Publish a Quote below.</h3>
+            <form (ngSubmit)="publishQuote()" #form="ngForm">
+                <div class="form-group">
+                    <label for="name">Quote:</label>
+                    <textarea class="form-control" id="quote" [(ngModel)]="newQuote.name" name="name" #quote = "ngModel" required></textarea>
+                    <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+                        <p>Input a quote.</p>
+                    </div>
 
-            Display{{newQuote.name}}
-        </div>
-        <div class="form-group">
-            <label for="author">Author:</label>
-            <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author = "ngModel" required>
-            <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
-                <p>Input a the Quote author.</p>
-            </div>
+                    Display{{newQuote.name}}
+                </div>
+                <div class="form-group">
+                    <label for="author">Author:</label>
+                    <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author = "ngModel" required>
+                    <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                        <p>Input a the Quote author.</p>
+                    </div>
 
-            Display{{newQuote.author}}
-        </div>
-        <div class="form-group">
-            <label for="publisher">Publisher:</label>
-            <input type="text" class="form-control" id="publisher" [(ngModel)]="newQuote.publisher" name="publisher" #publisher = "ngModel" required>
-            <div [hidden]="publisher.valid || publisher.pristine" class="alert alert-danger">
-                <p>Input your name.</p>
-            </div>
+                    Display{{newQuote.author}}
+                </div>
+                <div class="form-group">
+                    <label for="publisher">Publisher:</label>
+                    <input type="text" class="form-control" id="publisher" [(ngModel)]="newQuote.publisher" name="publisher" #publisher = "ngModel" required>
+                    <div [hidden]="publisher.valid || publisher.pristine" class="alert alert-danger">
+                        <p>Input your name.</p>
+                    </div>
 
-            Display{{newQuote.publisher}}
+                    Display{{newQuote.publisher}}
+                </div>
+                <div class="form-group">
+                    <label for="published">Date published:</label>
+                    <input type="date" id="published" [(ngModel)]="newQuote.publishedDate" name="publishedDate" #published = "ngModel" required>
+                    <div [hidden]="published.valid || published.pristine" class="alert alert-danger">
+                        <p>Input the published date of the quote.</p>
+                    </div>
+                </div>
+                <br>
+                <div class="publish"><button type="submit" class="btn btn-success">Publish Quote</button></div>
+            </form>
         </div>
-        <div class="form-group">
-            <label for="published">Date published:</label>
-            <input type="date" id="published" [(ngModel)]="newQuote.publishedDate" name="publishedDate" #published = "ngModel" required>
-            <div [hidden]="published.valid || published.pristine" class="alert alert-danger">
-                <p>Input the published date of the quote.</p>
-            </div>
-        </div>
-        <br>
-        <button type="submit">Publish Quote</button>
-    </form>
+    </div>
 </div>
