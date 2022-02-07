@@ -51,4 +51,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Licence
 
-You can check the licence [here]()
+You can check the licence [here](https://github.com/lewis-murgor/quotes/blob/master/Licence).
+
+##
+copyright (c) 2022
+by Lewis Murgor
