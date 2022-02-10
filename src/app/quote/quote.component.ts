@@ -9,9 +9,9 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[] = [
-    new Quote("The only thing that overcomes hard luck is hard work", "Harry Golden", "Lewis Murgor", new Date(2021,3,29), 0, 0),
-    new Quote("Wisdom is greater than silver and gold", "Bob Marley", "Daniel Ahuba", new Date(2021,1,1), 0, 0),
-    new Quote("Love defeats all evil", "Chronixx", "Fabian Kiprop", new Date(2022,0,7), 0, 0)
+    new Quote("The only thing that overcomes hard luck is hard work", "Harry Golden", "Lewis Murgor", new Date(2022,1,4), 0, 0),
+    new Quote("Wisdom is greater than silver and gold", "Bob Marley", "Daniel Ahuba", new Date(2022,1,6), 0, 0),
+    new Quote("Love defeats all evil", "Chronixx", "Fabian Kiprop", new Date(2022,1,9), 0, 0)
   ];
 
   toggle(index:number) {
