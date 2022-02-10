@@ -1,6 +1,7 @@
 <p>~{{quote.author}}~</p>
 <p>The quote was published by {{quote.publisher}}.</p>
-<p>It was published on {{quote.publishedDate | date}} which is {{quote.publishedDate | timeElapsed}} days ago.</p>
+<p>It was published on {{quote.publishedDate | date}}.</p>
+<p>The quote was published {{quote.publishedDate | timeElapsed}} days ago.</p>
 <div class="votes">
     <button class="btn btn-sm btn-success" (click)='upvote()'>Like:{{quote.upvotes}}</button>
     <button class="btn btn-sm btn-danger" (click)='downvote()'>Dislike:{{quote.downvotes}}</button>
